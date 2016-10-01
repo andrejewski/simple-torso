@@ -1,0 +1,52 @@
+{
+  "name": "simple-torso",
+  "version": "0.0.1",
+  "description": "super dumb headless browser for Node",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "ava",
+    "start": "gulp",
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-regenerator-runtime": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "del": "^2.2.1",
+    "eslint": "^3.2.2",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-mocha": "^4.3.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "mocha": "^3.0.1",
+    "source-map-support": "^0.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrejewski/simple-torso.git"
+  },
+  "keywords": [
+    "headless",
+    "browser",
+    "automated",
+    "testing",
+    "web",
+    "html"
+  ],
+  "author": "Chris Andrejewski <christopher.andrejewski@gmail.com> (chrisandrejewski.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrejewski/simple-torso/issues"
+  },
+  "homepage": "https://github.com/andrejewski/simple-torso#readme"
+}
