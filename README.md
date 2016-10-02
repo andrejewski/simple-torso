@@ -63,7 +63,7 @@ async function deleteFacebook(email, password) {
 
 ## Contributing
 
-Contributions are incredibly welcome as long as they are standardly applicable and pass the tests (or break bad ones). Tests are written in Ava and assertions are done with the Node.js core `assert` module.
+Contributions are incredibly welcome as long as they are standardly applicable and pass the tests (or break bad ones). Tests are written in Ava.
 
 ```bash
 # running tests

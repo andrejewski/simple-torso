@@ -55,9 +55,9 @@ export default class Browser {
     // peel off url query for sanity
     const queryStart = url.lastIndexOf('?');
     if (queryStart !== -1) {
-      const querystring = url.slice(queryStart);
+      const querystring = url.slice(queryStart + 1);
       query = Object.assign(qs.parse(querystring), query);
-      url = url.slice(0, queryStart - 1);
+      url = url.slice(0, queryStart);
     }
     return this._makeRequest(method, url, query, body, headers, jar);
   }
@@ -67,12 +67,14 @@ export default class Browser {
     return new Promise((resolve, reject) => {
       request({
         method,
+        url,
         qs: query,
         form: body,
         headers,
         jar
       }, (error, response, body) => {
         if (error) return reject(error);
+        response._url = url;
         response.body = body;
         resolve(response);
       });

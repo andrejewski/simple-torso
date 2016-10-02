@@ -21,14 +21,11 @@
     "del": "^2.2.1",
     "eslint": "^3.2.2",
     "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-mocha": "^4.3.0",
     "gulp": "^3.9.1",
+    "gulp-ava": "^0.14.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^3.0.1",
-    "gulp-mocha": "^3.0.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.7",
-    "mocha": "^3.0.1",
     "source-map-support": "^0.4.2"
   },
   "repository": {
@@ -48,5 +45,12 @@
   "bugs": {
     "url": "https://github.com/andrejewski/simple-torso/issues"
   },
-  "homepage": "https://github.com/andrejewski/simple-torso#readme"
+  "homepage": "https://github.com/andrejewski/simple-torso#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.75.0"
+  },
+  "ava": {
+    "source": ["lib/**/*"]
+  }
 }

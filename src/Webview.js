@@ -37,8 +37,8 @@ export default class Webview {
     });
   }
 
-  makeRequest(method, url, query, body, headers) {
-    return this._session.makeRequest('get', url, query)
+  makeRequest(...args) {
+    return this._session.makeRequest(...args)
       .then(response => {
         const webpage = new Webpage(this, response);
         const earlyHistory = this._historyStack.slice(0, this._historyIndex);

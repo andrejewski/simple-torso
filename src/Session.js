@@ -14,8 +14,8 @@ export default class Session {
     return webview;
   }
 
-  makeRequest(method, url, query = {}, body = {}, headers = {}) {
+  makeRequest(...args) {
     const jar = this._cookies;
-    return this._browser.makeRequest(method, url, query, body, headers, jar);
+    return this._browser.makeRequest(...args, jar);
   }
 }
