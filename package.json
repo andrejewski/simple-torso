@@ -1,6 +1,6 @@
 {
   "name": "simple-torso",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "super dumb headless browser for Node",
   "main": "lib/index.js",
   "scripts": {
