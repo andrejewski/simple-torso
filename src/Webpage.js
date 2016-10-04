@@ -10,6 +10,10 @@ export default class Webpage {
   getWebview() {return this._webview;}
   getResponse() {return this._response;}
 
+  getUrl() {
+    return this.getResponse()._url;
+  }
+
   getPath() {
     return this.getResponse().url;
   }
@@ -23,8 +27,7 @@ export default class Webpage {
   }
 
   resolveUrl(segment) {
-    // _url contains the full path
-    return url.resolve(this.getResponse()._url, segment);
+    return url.resolve(this.getUrl(), segment);
   }
 
   getStatusCode() {
@@ -75,14 +78,15 @@ export default class Webpage {
     }
 
     const body = form.serializeArray().reduce((body, pair) => {
-      const [name, value] = pair;
+      const {name, value} = pair;
       body[name] = value;
       return body;
     }, {});
     const action = form.attr('action');
     const url = action ? this.resolveUrl(action) : this.getUrl();
     const webview = this.getWebview();
-    const method = form.attr('method') || 'get';
+    const fMethod = form.attr('method') || 'get';
+    const method = fMethod.trim().toLowerCase();
     return method === 'get'
       ? webview.goto(url, body)
       : webview.send(method, url, body);
